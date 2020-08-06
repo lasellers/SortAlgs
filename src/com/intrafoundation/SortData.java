@@ -28,11 +28,11 @@ public class SortData {
     }
 
     public static int[] getSortDataInt4() {
-        return new int[]{7, 1, 3, 4};
+        return new int[]{3, 1, 2, 4};
     }
 
     public static int[] getSortDataInt4Sorted() {
-        return new int[]{1, 3, 4, 7};
+        return new int[]{1, 2, 3, 4};
     }
 
     public static int[] getSortDataInt6() {
