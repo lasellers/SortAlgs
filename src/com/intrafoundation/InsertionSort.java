@@ -8,16 +8,19 @@ public class InsertionSort implements BaseSort {
 
     public void sort(int[] arr) {
         swaps = 0;
-        int len = arr.length;
-        for (int pass = 1; pass < len; pass++) {
-            int key = arr[pass];
-            int scan = pass - 1;
-            while ((scan > -1) && (arr[scan] > key)) {
-                arr[scan + 1] = arr[scan];
-                scan--;
+        final int begin = 1;
+        final int end = arr.length;
+        for (int index = begin; index < end; index++) {
+            int key = arr[index]; //aka b
+            int repositionIndex = index - 1;
+            while ((repositionIndex >= 0) && (arr[repositionIndex] > key)) {
+                // since we have key aka b stored, we don't need to do a/b swaps
+                // but can do straight compare and overwrites
+                arr[repositionIndex + 1] = arr[repositionIndex];
+                repositionIndex--;
                 swaps++;
             }
-            arr[scan + 1] = key;
+            arr[repositionIndex + 1] = key; //insert key at beginning of set being moved up
         }
     }
 
