@@ -23,5 +23,4 @@ public class BubbleSort extends BaseSort {
         } while (swapped);
 
     }
-
 }

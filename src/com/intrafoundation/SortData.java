@@ -15,7 +15,6 @@ public class SortData {
     {
         int[] sorted = arr.clone();
         Arrays.sort(sorted);
-        s.sort(arr);
         return sorted;
     }
 

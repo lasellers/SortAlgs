@@ -5,7 +5,8 @@ public class BaseSort {
     protected int runTime = 0;
 
     public void sort(int[] arr) {
-
+        swaps = 0;
+        runTime = 0;
     }
 
     public int getSwaps() {

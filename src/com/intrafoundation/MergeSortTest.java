@@ -22,6 +22,7 @@ class MergeSortTest {
         int[] arr = SortData.getSortDataInt0();
         MergeSort s = new MergeSort();
         s.sort(arr);
+
         Assertions.assertArrayEquals(SortData.getSortDataInt0Sorted(), arr);
         Assertions.assertEquals(0, s.getSwaps());
     }
@@ -31,6 +32,7 @@ class MergeSortTest {
         int[] arr = SortData.getSortDataInt4();
         MergeSort s = new MergeSort();
         s.sort(arr);
+
         Assertions.assertArrayEquals(SortData.getSortDataInt4Sorted(), arr);
         Assertions.assertEquals(3, s.getSwaps());
     }
@@ -40,6 +42,7 @@ class MergeSortTest {
         int[] arr = SortData.getSortDataInt6();
         MergeSort s = new MergeSort();
         s.sort(arr);
+
         Assertions.assertArrayEquals(SortData.getSortDataInt6Sorted(), arr);
         Assertions.assertEquals(5, s.getSwaps());
     }
@@ -49,6 +52,7 @@ class MergeSortTest {
         MergeSort s = new MergeSort();
         int[] arr = SortData.getSortDataIntBigData();
         int[] sorted = SortData.getSortedReference(arr, s);
+        s.sort(arr);
 
         Assertions.assertArrayEquals(sorted, arr);
         Assertions.assertTrue( arr.length > 0);
@@ -62,11 +66,4 @@ class MergeSortTest {
     void merge() {
     }
 
-    @Test
-    void getSwaps() {
-    }
-
-    @Test
-    void getRunTime() {
-    }
 }

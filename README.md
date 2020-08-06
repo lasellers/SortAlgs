@@ -41,3 +41,7 @@ So with that preamble out of the way, load the project in Intellij and hit SHIFT
 ## Versions
 
 * v1.0 Just gathering everything together.
+* v1.1 Have added several tests and cleaned up things up. Still more tests to work on. And also, convert "bigdata"
+ into using a seeded pseudo-random generator so that we can we can compare the timing of each run in the test coverages.
+ Making a version of this in nodejs for now though.
+ 

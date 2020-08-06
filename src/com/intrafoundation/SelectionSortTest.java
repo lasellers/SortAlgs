@@ -42,6 +42,7 @@ class SelectionSortTest {
         int[] arr = SortData.getSortDataInt6();
         SelectionSort s = new SelectionSort();
         s.sort(arr);
+
         Assertions.assertArrayEquals(SortData.getSortDataInt6Sorted(), arr);
         Assertions.assertEquals(4, s.getSwaps());
     }
@@ -51,16 +52,10 @@ class SelectionSortTest {
         SelectionSort s = new SelectionSort();
         int[] arr = SortData.getSortDataIntBigData();
         int[] sorted = SortData.getSortedReference(arr, s);
+        s.sort(arr);
 
         Assertions.assertArrayEquals(sorted, arr);
         Assertions.assertTrue( arr.length > 0);
     }
 
-    @Test
-    void getSwaps() {
-    }
-
-    @Test
-    void getRunTime() {
-    }
 }

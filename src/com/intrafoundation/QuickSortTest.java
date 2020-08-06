@@ -42,6 +42,7 @@ class QuickSortTest {
         int[] arr = SortData.getSortDataInt6();
         QuickSort s = new QuickSort();
         s.sort(arr);
+
         Assertions.assertArrayEquals(SortData.getSortDataInt6Sorted(), arr);
         Assertions.assertEquals(9, s.getSwaps());
     }
@@ -51,6 +52,7 @@ class QuickSortTest {
         QuickSort s = new QuickSort();
         int[] arr = SortData.getSortDataIntBigData();
         int[] sorted = SortData.getSortedReference(arr, s);
+        s.sort(arr);
 
         Assertions.assertArrayEquals(sorted, arr);
         Assertions.assertTrue(arr.length > 0);
@@ -62,14 +64,6 @@ class QuickSortTest {
         int[] arr = new int[]{1, 2, 3};
         s.swap(arr, 0, 1);
         Assertions.assertArrayEquals(new int[]{2, 1, 3}, arr);
-    }
-
-    @Test
-    void getSwaps() {
-    }
-
-    @Test
-    void getRunTime() {
     }
 
     @Test

@@ -42,6 +42,7 @@ class InsertionSortTest {
         int[] arr = SortData.getSortDataInt6();
         InsertionSort s = new InsertionSort();
         s.sort(arr);
+
         Assertions.assertArrayEquals(SortData.getSortDataInt6Sorted(), arr);
         Assertions.assertEquals(8, s.getSwaps());
     }
@@ -51,6 +52,7 @@ class InsertionSortTest {
         InsertionSort s = new InsertionSort();
         int[] arr = SortData.getSortDataIntBigData();
         int[] sorted = SortData.getSortedReference(arr, s);
+        s.sort(arr);
 
         Assertions.assertArrayEquals(sorted, arr);
         Assertions.assertTrue( arr.length > 0);

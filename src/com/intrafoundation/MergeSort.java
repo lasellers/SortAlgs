@@ -3,36 +3,40 @@ package com.intrafoundation;
 public class MergeSort extends BaseSort {
 
     public void sort(int[] arr) {
-        if(arr.length <= 1)
+        if (arr.length <= 1)
             return;
 
         swaps = 0;
         mergeSort(arr, arr.length);
     }
 
-    public void mergeSort(int[] arr, int n) {
-        if (n < 2) {
+    public void mergeSort(int[] arr, final int len) {
+        if (len < 2) {
             return;
         }
-        int mid = n / 2;
+
+        final int mid = len / 2;
+        final int lenmid = len - mid;
+
         int[] l = new int[mid];
-        int[] r = new int[n - mid];
+        int[] r = new int[lenmid];
 
-        for (int i = 0; i < mid; i++) {
-            l[i] = arr[i];
-        }
-        for (int i = mid; i < n; i++) {
+        System.arraycopy(arr, 0, l, 0, mid);
+        if (lenmid >= 0)
+            System.arraycopy(arr, mid, r, 0, lenmid);
+/*        for (int i = mid; i < n; i++) {
             r[i - mid] = arr[i];
-        }
-        mergeSort(l, mid);
-        mergeSort(r, n - mid);
+        }*/
 
-        merge(arr, l, r, mid, n - mid);
+        mergeSort(l, mid);
+        mergeSort(r, lenmid);
+
+        merge(arr, l, r, mid, lenmid);
         swaps++;
     }
 
     public static void merge(
-            int[] a, int[] l, int[] r, int left, int right
+            int[] a, int[] l, int[] r, final int left, final int right
     ) {
         int i = 0, j = 0, k = 0;
         while (i < left && j < right) {

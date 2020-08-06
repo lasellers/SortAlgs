@@ -41,6 +41,7 @@ class BubbleSortTest {
         int[] arr = SortData.getSortDataInt6();
         BubbleSort s = new BubbleSort();
         s.sort(arr);
+
         Assertions.assertArrayEquals(SortData.getSortDataInt6Sorted(), arr);
         Assertions.assertEquals(8, s.getSwaps());
     }
@@ -50,16 +51,10 @@ class BubbleSortTest {
         BubbleSort s = new BubbleSort();
         int[] arr = SortData.getSortDataIntBigData();
         int[] sorted = SortData.getSortedReference(arr, s);
+        s.sort(arr);
 
         Assertions.assertArrayEquals(sorted, arr);
         Assertions.assertTrue( arr.length > 0);
     }
 
-    @Test
-    void getSwaps() {
-    }
-
-    @Test
-    void getRunTime() {
-    }
 }

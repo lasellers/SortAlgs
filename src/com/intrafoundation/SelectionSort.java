@@ -30,7 +30,6 @@ public class SelectionSort extends BaseSort {
             final int a = arr[partition];
             final int b = arr[index];
             // System.out.println("a,b " + a + "," +b);
-
             if (a > b) {
                 arr[partition] = b;
                 arr[index] = a;
