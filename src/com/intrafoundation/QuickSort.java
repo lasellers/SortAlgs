@@ -9,7 +9,7 @@ public class QuickSort implements BaseSort {
         quickSort(arr, 0, arr.length - 1);
     }
 
-    public void quickSort(int[] arr, int begin, int end) {
+    public void quickSort(int[] arr, final int begin, final int end) {
         if (begin < end) {
             final int partitionIndex = partition(arr, begin, end);
 
@@ -18,7 +18,7 @@ public class QuickSort implements BaseSort {
         }
     }
 
-    private int partition(int[] arr, int begin, int end) {
+    private int partition(int[] arr, final int begin, final int end) {
         final int pivot = arr[end];
         int slidingIndex = (begin - 1);
 
@@ -34,7 +34,7 @@ public class QuickSort implements BaseSort {
     }
 
     private void swap(int[] arr, int indexA, int indexB) {
-        int swapTemp = arr[indexA];
+        final int swapTemp = arr[indexA];
         arr[indexA] = arr[indexB];
         arr[indexB] = swapTemp;
         swaps++;
