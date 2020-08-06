@@ -8,17 +8,23 @@ public class BubbleSort implements BaseSort {
 
     public void sort(int[] arr) {
         swaps = 0;
-        int len = arr.length;
-        for (int pass = 0; pass < len - 1; pass++) {
-            for (int scan = 0; scan < len - pass - 1; scan++) {
-                if (arr[scan] > arr[scan + 1]) {
-                    int temp = arr[scan];
-                    arr[scan] = arr[scan + 1];
-                    arr[scan + 1] = temp;
+        final int end = arr.length - 1;
+
+        boolean swapped;
+        do {
+            swapped = false;
+            for (int inner = 0; inner < end; inner++) {
+                final int a = arr[inner];
+                final int b = arr[inner + 1];
+                if (a > b) {
+                    arr[inner] = b;
+                    arr[inner + 1] = a;
                     swaps++;
+                    swapped = true;
                 }
             }
-        }
+        } while (swapped);
+
     }
 
     public int getSwaps() {

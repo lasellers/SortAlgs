@@ -1,6 +1,24 @@
 package com.intrafoundation;
 
+import java.util.Arrays;
+
 public class SortData {
+    /**
+     * This uses the in-built sort function to sort any generated big data
+     * where we don't know what the result should be before hand.
+     * We trust the built in sort works and can compare it to our custom sort data.
+     * @param arr
+     * @param s
+     * @return
+     */
+    public static int[] getSortedReference(int[] arr, BaseSort s)
+    {
+        int[] sorted = arr.clone();
+        Arrays.sort(sorted);
+        s.sort(arr);
+        return sorted;
+    }
+
     public static int[] getSortDataInt0() {
         return new int[]{};
     }
@@ -30,7 +48,7 @@ public class SortData {
         int[] arr = new int[MAX + 1];
 
         for (int index = 0; index < MAX; index++) {
-            arr[index] = randomMinMax(-5,100);
+            arr[index] = randomMinMax(-5, 100);
         }
         return arr;
     }

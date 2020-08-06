@@ -50,9 +50,8 @@ class InsertionSortTest {
     void sortBigData() {
         InsertionSort s = new InsertionSort();
         int[] arr = SortData.getSortDataIntBigData();
-        int[] sorted = arr.clone();
-        Arrays.sort(sorted);
-        s.sort(arr);
+        int[] sorted = SortData.getSortedReference(arr, s);
+
         Assertions.assertArrayEquals(sorted, arr);
         Assertions.assertTrue( arr.length > 0);
     }

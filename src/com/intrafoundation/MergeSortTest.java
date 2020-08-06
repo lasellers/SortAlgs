@@ -48,9 +48,8 @@ class MergeSortTest {
     void sortBigData() {
         MergeSort s = new MergeSort();
         int[] arr = SortData.getSortDataIntBigData();
-        int[] sorted = arr.clone();
-        Arrays.sort(sorted);
-        s.sort(arr);
+        int[] sorted = SortData.getSortedReference(arr, s);
+
         Assertions.assertArrayEquals(sorted, arr);
         Assertions.assertTrue( arr.length > 0);
     }

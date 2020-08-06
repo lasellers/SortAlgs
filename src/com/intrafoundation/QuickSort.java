@@ -1,6 +1,6 @@
 package com.intrafoundation;
 
-public class QuickSort {
+public class QuickSort implements BaseSort{
     protected int swaps = 0;
     protected int runTime = 0;
 
