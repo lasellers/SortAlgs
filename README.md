@@ -13,6 +13,30 @@ never really used Intellij so it made sense to give a go. Much better.
 
 So with that preamble out of the way, load the project in Intellij and hit SHIFT-F10 to run everything.
 
+## Sorts
+* Block
+* Bubble
+* Comb
+* Cube
+* Cycle
+* Franceschini
+* Gnome
+* Heap
+* In place Merge
+* Insertion
+* Intro
+* Library
+* Merge
+* Odd Even
+* Patience
+* Quad
+* Quick
+* Selection
+* Shell
+* Smooth
+* Tim
+* Tree
+* Unshuffle
 
 ## Versions
 
