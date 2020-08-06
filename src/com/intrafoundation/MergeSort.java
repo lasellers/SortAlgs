@@ -1,8 +1,6 @@
 package com.intrafoundation;
 
-public class MergeSort implements BaseSort {
-    protected int swaps = 0;
-    protected int runTime = 0;
+public class MergeSort extends BaseSort {
 
     public void sort(int[] arr) {
         if(arr.length <= 1)
@@ -50,14 +48,6 @@ public class MergeSort implements BaseSort {
         while (j < right) {
             a[k++] = r[j++];
         }
-    }
-
-    public int getSwaps() {
-        return swaps;
-    }
-
-    public int getRunTime() {
-        return runTime;
     }
 
 }

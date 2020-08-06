@@ -2,10 +2,7 @@ package com.intrafoundation;
 
 import java.util.Arrays;
 
-public class InsertionSort implements BaseSort {
-    protected int swaps = 0;
-    protected int runTime = 0;
-
+public class InsertionSort extends BaseSort {
     public void sort(int[] arr) {
         swaps = 0;
         final int begin = 1;
@@ -22,14 +19,6 @@ public class InsertionSort implements BaseSort {
             }
             arr[repositionIndex + 1] = key; //insert key at beginning of set being moved up
         }
-    }
-
-    public int getSwaps() {
-        return swaps;
-    }
-
-    public int getRunTime() {
-        return runTime;
     }
 
 }

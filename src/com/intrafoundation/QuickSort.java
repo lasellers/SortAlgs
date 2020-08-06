@@ -1,8 +1,6 @@
 package com.intrafoundation;
 
-public class QuickSort implements BaseSort {
-    protected int swaps = 0;
-    protected int runTime = 0;
+public class QuickSort extends BaseSort {
 
     public void sort(int[] arr) {
         swaps = 0;
@@ -31,21 +29,6 @@ public class QuickSort implements BaseSort {
         swap(arr, ++slidingIndex, end);
 
         return slidingIndex;
-    }
-
-    private void swap(int[] arr, int indexA, int indexB) {
-        final int swapTemp = arr[indexA];
-        arr[indexA] = arr[indexB];
-        arr[indexB] = swapTemp;
-        swaps++;
-    }
-
-    public int getSwaps() {
-        return swaps;
-    }
-
-    public int getRunTime() {
-        return runTime;
     }
 
 }

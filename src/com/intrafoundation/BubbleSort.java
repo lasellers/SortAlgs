@@ -2,10 +2,7 @@ package com.intrafoundation;
 
 import java.util.Arrays;
 
-public class BubbleSort implements BaseSort {
-    protected int swaps = 0;
-    protected int runTime = 0;
-
+public class BubbleSort extends BaseSort {
     public void sort(int[] arr) {
         swaps = 0;
         final int end = arr.length - 1;
@@ -25,14 +22,6 @@ public class BubbleSort implements BaseSort {
             }
         } while (swapped);
 
-    }
-
-    public int getSwaps() {
-        return swaps;
-    }
-
-    public int getRunTime() {
-        return runTime;
     }
 
 }

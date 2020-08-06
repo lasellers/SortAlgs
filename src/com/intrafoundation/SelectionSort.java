@@ -2,9 +2,7 @@ package com.intrafoundation;
 
 import java.util.Arrays;
 
-public class SelectionSort implements BaseSort {
-    protected int swaps = 0;
-    protected int runTime = 0;
+public class SelectionSort extends BaseSort {
 
     public void sort(int[] arr) {
         if(arr.length <= 1) return;
@@ -40,14 +38,6 @@ public class SelectionSort implements BaseSort {
             }
             // System.out.println(Arrays.toString(arr));
         } while (++partition < end);
-    }
-
-    public int getSwaps() {
-        return swaps;
-    }
-
-    public int getRunTime() {
-        return runTime;
     }
 
 }
