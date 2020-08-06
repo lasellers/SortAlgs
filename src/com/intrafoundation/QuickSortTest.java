@@ -34,7 +34,7 @@ class QuickSortTest {
         QuickSort s = new QuickSort();
         s.sort(arr);
         Assertions.assertArrayEquals(SortData.getSortDataInt4Sorted(), arr);
-        Assertions.assertEquals(2, s.getSwaps());
+        Assertions.assertEquals(6, s.getSwaps());
     }
 
     @Test
@@ -43,7 +43,7 @@ class QuickSortTest {
         QuickSort s = new QuickSort();
         s.sort(arr);
         Assertions.assertArrayEquals(SortData.getSortDataInt6Sorted(), arr);
-        Assertions.assertEquals(4, s.getSwaps());
+        Assertions.assertEquals(9, s.getSwaps());
     }
 
     @Test

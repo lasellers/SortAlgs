@@ -34,7 +34,7 @@ class InsertionSortTest {
         InsertionSort s = new InsertionSort();
         s.sort(arr);
         Assertions.assertArrayEquals(SortData.getSortDataInt4Sorted(), arr);
-        Assertions.assertEquals(3, s.getSwaps());
+        Assertions.assertEquals(2, s.getSwaps());
     }
 
     @Test

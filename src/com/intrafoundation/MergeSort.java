@@ -5,6 +5,9 @@ public class MergeSort implements BaseSort {
     protected int runTime = 0;
 
     public void sort(int[] arr) {
+        if(arr.length <= 1)
+            return;
+
         swaps = 0;
         mergeSort(arr, arr.length);
     }
