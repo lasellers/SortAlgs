@@ -5,10 +5,6 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.util.Arrays;
-
-import static org.junit.jupiter.api.Assertions.*;
-
 class InsertionSortTest {
 
     @BeforeEach
@@ -58,11 +54,4 @@ class InsertionSortTest {
         Assertions.assertTrue( arr.length > 0);
     }
 
-    @Test
-    void getSwaps() {
-    }
-
-    @Test
-    void getRunTime() {
-    }
 }

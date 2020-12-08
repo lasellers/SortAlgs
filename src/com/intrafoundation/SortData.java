@@ -7,12 +7,12 @@ public class SortData {
      * This uses the in-built sort function to sort any generated big data
      * where we don't know what the result should be before hand.
      * We trust the built in sort works and can compare it to our custom sort data.
+     *
      * @param arr
      * @param s
      * @return
      */
-    public static int[] getSortedReference(int[] arr, BaseSort s)
-    {
+    public static int[] getSortedReference(int[] arr, BaseSort s) {
         int[] sorted = arr.clone();
         Arrays.sort(sorted);
         return sorted;
@@ -45,14 +45,28 @@ public class SortData {
     public static int[] getSortDataIntBigData() {
         final int MAX = 200;
         int[] arr = new int[MAX + 1];
+        final int minV = -5;
+        final int maxV = 100;
 
         for (int index = 0; index < MAX; index++) {
-            arr[index] = randomMinMax(-5, 100);
+            arr[index] = randomMinMax(minV, maxV);
         }
         return arr;
     }
 
-    protected static int randomMinMax(int minV, int maxV) {
+    public static int[] getSortDataIntBigData2() {
+        final int MAX = 20;
+        int[] arr = new int[MAX + 1];
+        final int minV = -1;
+        final int maxV = 10;
+
+        for (int index = 0; index < MAX; index++) {
+            arr[index] = randomMinMax(minV, maxV);
+        }
+        return arr;
+    }
+
+    protected static int randomMinMax(final int minV, final int maxV) {
         return (int) (Math.random() * (maxV - minV + 1) + minV);
     }
 

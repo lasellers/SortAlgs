@@ -1,13 +1,9 @@
 package com.intrafoundation;
 
-import java.util.Arrays;
-
 public class SelectionSort extends BaseSort {
 
     public void sort(int[] arr) {
         if(arr.length <= 1) return;
-
-        // System.out.println(Arrays.toString(arr));
 
         swaps = 0;
 
@@ -24,18 +20,15 @@ public class SelectionSort extends BaseSort {
                     minValue = arr[i];
                 }
             }
-            // System.out.println("partition,end,index,minValue " + partition + "," + end + ","+ index + "," +minValue);
 
             //
             final int a = arr[partition];
             final int b = arr[index];
-            // System.out.println("a,b " + a + "," +b);
             if (a > b) {
                 arr[partition] = b;
                 arr[index] = a;
                 swaps++;
             }
-            // System.out.println(Arrays.toString(arr));
         } while (++partition < end);
     }
 

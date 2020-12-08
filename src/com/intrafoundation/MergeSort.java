@@ -1,5 +1,6 @@
 package com.intrafoundation;
 
+// note: still refactoring this ...
 public class MergeSort extends BaseSort {
 
     public void sort(int[] arr) {
